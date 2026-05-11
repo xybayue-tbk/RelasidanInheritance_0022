@@ -2,5 +2,9 @@
 #define ANAK_H
 
 class anak {
-    
-}
+public:
+    string nama;
+    anak(string pnama) :nama(pnama) {
+        cout << "Anak \"" << nama << "\" ada\n";
+    }
+};
