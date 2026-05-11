@@ -46,3 +46,38 @@ public:
         cout << endl;
     }
 };
+
+class admin : public user {
+public:
+
+    admin(string pnama, string pemail): user(pnama, pemail)
+    { }
+
+    void showAllMember(vector<member*>& daftarMember) {
+        cout << "===== DAFTAR MEMBER =====" << endl;
+        for (auto& m : daftarMember) {
+            cout << "ID     : " << m->id << endl;
+            cout << "Nama   : " << m->nama << endl;
+            cout << "Email  : " << m->email << endl;
+            cout << "Status : ";
+            if (m->status)
+                cout << "Aktif";
+            else
+                cout << "Nonaktif";
+            cout << endl;
+            cout << "-------------------" << endl;
+        }
+        cout << endl;
+    }
+    void toggleActivationMember(member* m) {
+        m->status = !m->status;
+        cout << "Status member "
+             << m->nama
+             << " berhasil diubah menjadi ";
+        if (m->status)
+            cout << "Aktif\n";
+        else
+            cout << "Nonaktif\n";
+        cout << endl;
+    }
+};
