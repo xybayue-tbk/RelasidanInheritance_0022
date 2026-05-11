@@ -28,4 +28,6 @@ void ibu::cetakanak() {
     for (int i = 0; i < daftar_anak.size(); i++) {
         cout << "- " << daftar_anak[i]->nama << "\n";
     }
+    cout << endl;
 }
+#endif
