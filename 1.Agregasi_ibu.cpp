@@ -19,3 +19,13 @@ public:
 void ibu::tambahanak(anak* panak) {
     daftar_anak.push_back(panak);
 }
+
+void ibu::cetakanak() {
+    cout << "Daftar anak dari Ibu \"" << this->nama << "\":\n";
+    /*for (auto& a : daftar_anak) {
+        cout << a->nama << "\n";
+    }*/
+    for (int i = 0; i < daftar_anak.size(); i++) {
+        cout << "- " << daftar_anak[i]->nama << "\n";
+    }
+}
