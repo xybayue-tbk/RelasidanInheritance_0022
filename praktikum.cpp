@@ -81,3 +81,29 @@ public:
         cout << endl;
     }
 };
+
+int main() {
+
+    admin admin1("super admin", "admin@gmail.com");
+
+    member* member1 = new member("yanto", "yantoganteng@gmail.com");
+    member* member2 = new member("yanti", "yantiajahh@gmail.com");
+
+    vector<member*> daftarMember;
+
+    daftarMember.push_back(member1);
+    daftarMember.push_back(member2);
+
+    admin1.showAllMember(daftarMember);
+
+    member1->showProfile();
+
+    admin1.toggleActivationMember(member1);
+
+    member1->showProfile();
+
+    delete member1;
+    delete member2;
+
+    return 0;
+}
